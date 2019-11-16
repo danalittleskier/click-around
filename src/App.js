@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import ImageCard from "./components/ImageCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
+import Instructions from "./components/Instructions";
+import Score from "./components/Score";
 import cards from "./images.json";
 
 class App extends Component {
@@ -36,6 +38,8 @@ class App extends Component {
     return (
       <Wrapper>
         <Title>Click Around</Title>
+        <Instructions>Don't click on the same image to score points! </Instructions>
+        <Score>Score {this.state.score}</Score>
         {this.state.cards.map(card => (
           <ImageCard
           randomizeCards={this.randomizeCards}
