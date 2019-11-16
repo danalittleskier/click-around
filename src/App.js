@@ -18,12 +18,17 @@ class App extends Component {
     console.log(this.state.score);
   }
 
+  resetScore = () => {
+    this.setState({ score: 0 });
+    console.log(this.state.score);
+  }
+
   randomizeCards = id => {
     const updateCards = this.state.cards
       .map(onecard => { 
         if (onecard.id === id) {
+          onecard.clicked ? this.resetScore() : this.updateScore();
           onecard.clicked = true;
-          this.updateScore();
           return onecard;
         }
           return onecard; 
