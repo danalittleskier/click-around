@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Banyan Tree",
+    "image": "https://stylesatlife.com/wp-content/uploads/2016/08/1.Banyan-tree.png",
+    "clicked": false
+  },
+  {
+    "id": 2,
+    "name": "Aloe Vera Tree",
+    "image": "https://stylesatlife.com/wp-content/uploads/2016/08/4.-Aloe-Vera-tree.png",
+    "clicked": false
+  },
+  {
+    "id": 3,
+    "name": "Eucalyptus",
+    "image": "https://stylesatlife.com/wp-content/uploads/2016/08/7.-Eucalyptus.png",
+    "clicked": false
+  },
+  {
+    "id": 4,
+    "name": "Mahagony",
+    "image": "https://stylesatlife.com/wp-content/uploads/2016/08/8.-Mahagony.png",
+    "clicked": false
+  },
+  {
+    "id": 5,
+    "name": "Cork Tree",
+    "image": "https://stylesatlife.com/wp-content/uploads/2016/08/12.-Cork-tree.png",
+    "clicked": false
+  },
+  {
+    "id": 6,
+    "name": "Teak",
+    "image": "https://stylesatlife.com/wp-content/uploads/2016/08/14.-Teak-tree.jpg",
+    "clicked": false
+  },
+  {
+    "id": 7,
+    "name": "Maple",
+    "image": "https://stylesatlife.com/wp-content/uploads/2016/08/16.-The-maple-tree.png",
+    "clicked": false
+  },
+  {
+    "id": 8,
+    "name": "Aspen",
+    "image": "https://www.homestratosphere.com/wp-content/uploads/2019/07/Black-birch.jpg?ezimgfmt=ng:webp/ngcb1",
+    "clicked": false
+  },
+  {
+    "id": 9,
+    "name": "Oak Tree",
+    "image": "https://stylesatlife.com/wp-content/uploads/2016/08/17.-The-oak-tree.jpg",
+    "clicked": false
+  },
+  {
+    "id": 10,
+    "name": "Cedar",
+    "image": "https://stylesatlife.com/wp-content/uploads/2016/08/20.-Cedar.png",
+    "clicked": false
+  },
+  {
+    "id": 11,
+    "name": "Black Walnut",
+    "image": "https://stylesatlife.com/wp-content/uploads/2016/08/19.-Black-walnut.png",
+    "clicked": false
+  },
+  {
+    "id": 12,
+    "name": "Sal Tree",
+    "image": "https://stylesatlife.com/wp-content/uploads/2016/08/11.-Sal-tree.png",
+    "clicked": false
+  }
+]
