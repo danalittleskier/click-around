@@ -1,26 +1,31 @@
 import React, { Component } from "react";
 import ImageCard from "./components/ImageCard";
 import Wrapper from "./components/Wrapper";
-import Title from "./components/Title";
+//import Title from "./components/Title";
 import Instructions from "./components/Instructions";
-import Score from "./components/Score";
+import Navbar from "./components/Navbar";
 import cards from "./images.json";
 
 class App extends Component {
-  // Setting this.state.cards to the cards json array
+
   state = {
     cards,
-    score: 0
+    score: 0,
+    highScore: 0
   };
 
+  checkHighScore = () => {
+    if(this.state.score >=  this.state.highScore){
+      this.setState({ highScore: this.state.score +1 })
+    }    
+  }
+  
   updateScore = () => {
     this.setState({ score: this.state.score + 1 });
-    console.log(this.state.score);
   }
 
   resetScore = () => {
     this.setState({ score: 0 });
-    console.log(this.state.score);
   }
 
   randomizeCards = id => {
@@ -28,6 +33,7 @@ class App extends Component {
       .map(onecard => { 
         if (onecard.id === id) {
           onecard.clicked ? this.resetScore() : this.updateScore();
+          this.checkHighScore();
           onecard.clicked = true;
           return onecard;
         }
@@ -38,13 +44,12 @@ class App extends Component {
     this.setState({ cards });
   };
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
+ 
   render() {
     return (
-      <Wrapper>
-        <Title>Click Around</Title>
-        <Instructions>Don't click on the same image to score points! </Instructions>
-        <Score>Score {this.state.score}</Score>
+    <Wrapper>
+      <Navbar score={this.state.score} highScore= {this.state.highScore}  /> 
+        <Instructions>Avoid clicking on the same image twice to score points! </Instructions>
         {this.state.cards.map(card => (
           <ImageCard
           randomizeCards={this.randomizeCards}
@@ -56,7 +61,7 @@ class App extends Component {
 
           />
         ))}
-      </Wrapper>
+    </Wrapper>
     );
   }
 }
