@@ -49,7 +49,7 @@ class App extends Component {
     return (
     <Wrapper>
       <Navbar score={this.state.score} highScore= {this.state.highScore}  /> 
-        <Instructions>Avoid clicking on the same image twice to score points! </Instructions>
+        <Instructions>Avoid clicking on the same tree twice to score points! </Instructions>
         {this.state.cards.map(card => (
           <ImageCard
           randomizeCards={this.randomizeCards}
