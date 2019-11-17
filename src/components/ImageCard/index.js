@@ -5,7 +5,7 @@ function ImageCard(props) {
   return (
     <div className="card">
       <div className="img-container">
-        <img alt={props.name} src={props.image} />
+        <img alt={props.name} src={props.image} onClick={() => props.randomizeCards(props.id)} />
       </div>
       <div className="content">
         <ul>
@@ -14,7 +14,7 @@ function ImageCard(props) {
           </li>
         </ul>
       </div>
-      <span onClick={() => props.randomizeCards(props.id)} className="remove">
+      <span onClick={() => props.randomizeCards(props.id)} className="clicky">
         Click
       </span>
     </div>

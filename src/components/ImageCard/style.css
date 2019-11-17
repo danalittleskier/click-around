@@ -33,7 +33,7 @@
   margin-top: 18px;
 }
 
-.card > .remove {
+.card > .clicky {
   color: #ff1744;
   font-size: 25px;
   position: absolute;
@@ -42,7 +42,7 @@
   cursor: pointer;
 }
 
-.card > .remove:hover {
+.card > .clicky:hover {
   color: #d50000;
 }
 
