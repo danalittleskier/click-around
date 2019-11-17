@@ -15,7 +15,7 @@ function ImageCard(props) {
         </ul>
       </div>
       <span onClick={() => props.randomizeCards(props.id)} className="clicky">
-        Click
+        CLICK
       </span>
     </div>
   );

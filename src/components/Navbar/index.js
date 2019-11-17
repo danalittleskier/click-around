@@ -4,12 +4,12 @@ import "./style.css";
 function Navbar({ score, highScore }) {
   return (
     <div className="container">
-      <nav className="navbar navbar-light bg-light">
+      <nav className="navbar navbar-dark bg-dark">
       <img src="react-icon.jpg" width="30" height="30" alt="" />
         <span className="navbar-text">
-          Memory Game React App
+          CLICK Around Memory GAME
         </span>
-        <span className="navbar-text">
+        <span className="navbar-text score">
           Score {score}  | High Score {highScore}
         </span>
       </nav>
