@@ -5,7 +5,7 @@ function Navbar({ score, highScore }) {
   return (
     <div className="container">
       <nav className="navbar navbar-dark bg-dark">
-      <img src="react-icon.jpg" width="30" height="30" alt="" />
+        <img src="react-icon.jpg" width="30" height="30" alt="" />
         <span className="navbar-text">
           CLICK Around Memory GAME
         </span>

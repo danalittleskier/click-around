@@ -20,7 +20,7 @@ class App extends Component {
       this.setState({
         highScore: this.state.score + 1,
         instructions: "New HIGH SCORE! Click some more"
-      }) 
+      })
     }
   }
 

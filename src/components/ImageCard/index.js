@@ -10,7 +10,7 @@ function ImageCard(props) {
       <div className="content">
         <ul>
           <li>
-             {props.name}
+            {props.name}
           </li>
         </ul>
       </div>
