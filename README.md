@@ -16,7 +16,7 @@ https://click-around.herokuapp.com/
 
 ### Role
 
-Dana Alexandrescu -
+* Dana Alexandrescu - developer\
 Portfolio https://danalittleskier.github.io/Portfolio/
 
 ![React](/public/react-icon.jpg "React Icon")
