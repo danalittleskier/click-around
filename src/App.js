@@ -23,7 +23,7 @@ class App extends Component {
 
   updateScore = (id) => {
     this.setState({ 
-      clickedCards: this.state.clickedCards.push(id),
+      clickedCards: [...this.state.clickedCards, id],
       score: this.state.score + 1 
     });
     this.checkHighScore();
