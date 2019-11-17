@@ -10,49 +10,55 @@ class App extends Component {
 
   state = {
     cards,
+    clickedCards: [],
     score: 0,
     highScore: 0
   };
 
   checkHighScore = () => {
-    if(this.state.score >=  this.state.highScore){
-      this.setState({ highScore: this.state.score +1 })
-    }    
+    if (this.state.score >= this.state.highScore) {
+      this.setState({ highScore: this.state.score + 1 })
+    }
   }
-  
-  updateScore = () => {
-    this.setState({ score: this.state.score + 1 });
+
+  updateScore = (id) => {
+    this.setState({ 
+      clickedCards: this.state.clickedCards.push(id),
+      score: this.state.score + 1 
+    });
+    this.checkHighScore();
   }
 
   resetScore = () => {
-    this.setState({ score: 0 });
+    this.setState({ 
+      clickedCards: [],
+      score: 0 
+    });
   }
 
   randomizeCards = id => {
-    const updateCards = this.state.cards
-      .map(onecard => { 
-        if (onecard.id === id) {
-          onecard.clicked ? this.resetScore() : this.updateScore();
-          this.checkHighScore();
-          onecard.clicked = true;
-          return onecard;
-        }
-          return onecard; 
-        });
-
-    const cards = updateCards.map((a) => [Math.random(), a]).sort((a, b) => a[0] - b[0]).map((a) => a[1]);
+    //this.state.clickedCards.includes(id) ? this.resetScore() : this.updateScore(id);
+    console.log(this.state.clickedCards);
+    if(this.state.clickedCards.includes(id)){
+      this.resetScore()
+    }
+    else {
+      this.updateScore(id);
+    }
+    //randomize the array of cards
+    const cards = this.state.cards.map((a) => [Math.random(), a]).sort((a, b) => a[0] - b[0]).map((a) => a[1]);
     this.setState({ cards });
   };
 
- 
+
   render() {
     return (
-    <Wrapper>
-      <Navbar score={this.state.score} highScore= {this.state.highScore}  /> 
+      <Wrapper>
+        <Navbar score={this.state.score} highScore={this.state.highScore} />
         <Instructions>Avoid clicking on the same tree twice to score points! </Instructions>
         {this.state.cards.map(card => (
           <ImageCard
-          randomizeCards={this.randomizeCards}
+            randomizeCards={this.randomizeCards}
             id={card.id}
             key={card.id}
             name={card.name}
@@ -61,7 +67,7 @@ class App extends Component {
 
           />
         ))}
-    </Wrapper>
+      </Wrapper>
     );
   }
 }

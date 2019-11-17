@@ -12,12 +12,6 @@ function ImageCard(props) {
           <li>
              {props.name}
           </li>
-          {/* <li>
-            <strong>Occupation:</strong> {props.occupation}
-          </li>
-          <li>
-            <strong>Location:</strong> {props.location}
-          </li> */}
         </ul>
       </div>
       <span onClick={() => props.randomizeCards(props.id)} className="remove">
