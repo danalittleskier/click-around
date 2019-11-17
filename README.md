@@ -10,8 +10,13 @@ Yippee!
 * Every time an image is clicked, the images rendered to the page shuffle themselves in a random order.
 * Once the user's score is reset after an incorrect guess, the game restarts.
 
+### Deployed on Heroku
+
+https://click-around.herokuapp.com/
+
 ### Role
 
-Dana Alexandrescu - developer
+Dana Alexandrescu -
+Portfolio https://danalittleskier.github.io/Portfolio/
 
 ![React](/public/react-icon.jpg "React Icon")
